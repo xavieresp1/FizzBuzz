@@ -1,0 +1,24 @@
+pragma solidity >= 0.7.0 < 0.9.0;
+
+contract fizzbuzz {
+    function fizzbuzzy() pure public{
+        uint _test = 15; //change this value to see if the number is a fizz, buzz, fizzbuzz, or not a fizzbuzz.
+        if((_test % 3) == 0){
+            if((_test % 5) == 0){
+                revert("fizzbuzz!");
+            }
+            else{
+                revert("fizz!");
+            }
+        }
+        else{
+            if((_test%5)==0){
+                revert("buzz!");
+            }
+            else{
+                revert("not a fizzbuzz!");
+            }
+        }
+    }
+
+}
